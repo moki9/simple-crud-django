@@ -2,7 +2,7 @@
 <ul>
     {% for friend in object_list %}
     <li>
-        <a href="{% url 'friend_edit' friend.id %}" >{{ friend.username }}</a> :: {{ friend.fname }} {{ friend.lname }} 
+        <a href="{% url 'friend_edit' friend.id %}" >{{ friend.username }}</a> :: {{ friend.fname }} {{ friend.lname }} <a href="{% url 'friend_delete' friend.id %}" > x </a>
     </li>
     {% endfor %}
 </ul>
