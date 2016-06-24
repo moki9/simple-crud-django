@@ -1,0 +1,9 @@
+<h1>Ma Friends</h1>
+<ul>
+    {% for friend in object_list %}
+    <li>
+        <a href="{% url 'friend_edit' friend.id %}" >{{ friend.username }}</a> :: {{ friend.fname }} {{ friend.lname }} 
+    </li>
+    {% endfor %}
+</ul>
+<span><a href="{% url 'friend_create' %}">Add a friend</a></span>
